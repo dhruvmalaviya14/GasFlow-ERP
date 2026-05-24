@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "u1",
+    "username": "bharat",
+    "password": "$2a$10$CccCQNxxBWTJuHBdRRyqxuVtbW6OGUf7NtY1y4Z6zQ3I92krzchOK",
+    "name": "Bharat (Admin)",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "_id": "u2",
+    "username": "lalo",
+    "password": "$2a$10$CccCQNxxBWTJuHBdRRyqxuuGdIXBUlAbco73WeUe0/IPhdaiVoxtK",
+    "name": "Lalo (Staff)",
+    "role": "staff",
+    "status": "active"
+  }
+]

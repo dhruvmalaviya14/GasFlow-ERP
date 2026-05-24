@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "id_xkg4vholempjojl6x",
+    "name": "sahjanand",
+    "address": "jasdan..",
+    "contact": "6355625740",
+    "rate": 1200,
+    "creditLimit": 50000,
+    "filledCylinders": 0,
+    "emptyCylinders": 0,
+    "pendingBalance": 0,
+    "totalPaid": 0,
+    "createdAt": "2026-05-24T11:14:10.569Z",
+    "updatedAt": "2026-05-24T11:41:05.445Z"
+  },
+  {
+    "_id": "id_i5gbsn8inmpjpe179",
+    "name": "dhruv",
+    "address": "jasdan",
+    "contact": "1234567890",
+    "rate": 1500,
+    "creditLimit": 50000,
+    "filledCylinders": 0,
+    "emptyCylinders": 0,
+    "pendingBalance": 0,
+    "totalPaid": 0,
+    "createdAt": "2026-05-24T11:37:50.997Z",
+    "updatedAt": "2026-05-24T11:41:05.445Z"
+  }
+]

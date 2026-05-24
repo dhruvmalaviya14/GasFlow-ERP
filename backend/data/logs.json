@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "id_yxv9py610mpjpi78n",
+    "user": "bharat",
+    "action": "Executed administrative full system transactional reset.",
+    "createdAt": "2026-05-24T11:41:05.447Z"
+  },
+  {
+    "_id": "id_mg4ghaeuympjsdajz",
+    "user": "lalo",
+    "action": "Logged into the system",
+    "createdAt": "2026-05-24T13:01:15.311Z"
+  }
+]
