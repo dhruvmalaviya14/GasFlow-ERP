@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "_id": "id_qhce5u7kumpk452cc",
+    "hotel": "id_cvscaramkmpk422np",
+    "type": "delivery",
+    "referenceId": "id_9tzvp739ompk452cc",
+    "debit": 12000,
+    "credit": 0,
+    "runningBalance": 12000,
+    "notes": "Delivered 10 cylinders, collected 0 empties.",
+    "createdAt": "2026-05-24T18:30:46.812Z"
+  },
+  {
+    "_id": "id_ulmfa18zzmpk4ggrd",
+    "hotel": "id_havakeic9mpk42iwd",
+    "type": "delivery",
+    "referenceId": "id_9ybrh5stumpk4ggrd",
+    "debit": 5500,
+    "credit": 0,
+    "runningBalance": 5500,
+    "notes": "Delivered 5 cylinders, collected 0 empties.",
+    "createdAt": "2026-05-24T18:39:38.713Z"
+  },
+  {
+    "_id": "id_zajn9tn6ampk4gp1w",
+    "hotel": "id_cvscaramkmpk422np",
+    "type": "payment",
+    "referenceId": "id_8ok7nmmwimpk4gp1w",
+    "debit": 0,
+    "credit": 2000,
+    "runningBalance": 10000,
+    "notes": "Direct hotel payment recorded. Method: cash",
+    "createdAt": "2026-05-24T18:39:49.460Z"
+  },
+  {
+    "_id": "id_jc1fk462impk5rmy4",
+    "hotel": "id_havakeic9mpk42iwd",
+    "type": "payment",
+    "referenceId": "id_j9ewfkmy2mpk5rmy4",
+    "debit": 0,
+    "credit": 5500,
+    "runningBalance": 0,
+    "notes": "received\n",
+    "createdAt": "2026-05-24T19:16:19.564Z"
+  },
+  {
+    "_id": "id_r4u3fkcawmpk5ru0z",
+    "hotel": "id_cvscaramkmpk422np",
+    "type": "payment",
+    "referenceId": "id_79okks50nmpk5ru0z",
+    "debit": 0,
+    "credit": 5000,
+    "runningBalance": 5000,
+    "notes": "half\n",
+    "createdAt": "2026-05-24T19:16:28.739Z"
+  },
+  {
+    "_id": "id_2x3b92yd3mpk65xok",
+    "hotel": "id_cvscaramkmpk422np",
+    "type": "delivery",
+    "referenceId": "id_omhudera9mpk65xok",
+    "debit": 0,
+    "credit": 0,
+    "runningBalance": 5000,
+    "notes": "Delivered 0 cylinders, collected 8 empties.",
+    "createdAt": "2026-05-24T19:27:26.660Z"
+  }
+]

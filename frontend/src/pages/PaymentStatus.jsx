@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../api/axiosInstance';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Coins,
@@ -30,7 +30,7 @@ export default function PaymentStatus() {
   const { data: accounts, isLoading } = useQuery({
     queryKey: ['paymentStatus'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/payments/status');
+      const res = await axios.get('/payments/status');
       return res.data;
     }
   });
@@ -38,7 +38,7 @@ export default function PaymentStatus() {
   // 2. Mutation to record independent settlement credits
   const paymentMutation = useMutation({
     mutationFn: async (payload) => {
-      const res = await axios.post('http://127.0.0.1:5000/api/payments', payload);
+      const res = await axios.post('/payments', payload);
       return res.data;
     },
     onSuccess: () => {

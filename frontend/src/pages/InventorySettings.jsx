@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../api/axiosInstance';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Settings,
@@ -33,7 +33,7 @@ export default function InventorySettings() {
   const { data: inventory, isLoading } = useQuery({
     queryKey: ['inventory'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/inventory');
+      const res = await axios.get('/inventory');
       // Set default input states
       if (res.data) {
         setFilled(res.data.filledStock);
@@ -47,7 +47,7 @@ export default function InventorySettings() {
   // 2. Mutation for Manual Stock Adjustments
   const adjustMutation = useMutation({
     mutationFn: async (payload) => {
-      const res = await axios.post('http://127.0.0.1:5000/api/inventory/update', payload);
+      const res = await axios.post('/inventory/update', payload);
       return res.data;
     },
     onSuccess: () => {
@@ -65,7 +65,7 @@ export default function InventorySettings() {
   // 3. Mutation for Refinery Truck Arrivals
   const truckMutation = useMutation({
     mutationFn: async (payload) => {
-      const res = await axios.post('http://127.0.0.1:5000/api/inventory/arrival', payload);
+      const res = await axios.post('/inventory/arrival', payload);
       return res.data;
     },
     onSuccess: () => {

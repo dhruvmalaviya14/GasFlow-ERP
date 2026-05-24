@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "_id": "id_9tzvp739ompk452cc",
+    "deliveryNo": "DLV-2026-0001",
+    "hotel": "id_cvscaramkmpk422np",
+    "staff": "u1",
+    "deliveredQty": 10,
+    "returnedEmptiesQty": 0,
+    "totalAmount": 12000,
+    "paymentReceived": 0,
+    "paymentMethod": "none",
+    "notes": "",
+    "createdAt": "2026-05-24T18:30:46.812Z"
+  },
+  {
+    "_id": "id_9ybrh5stumpk4ggrd",
+    "deliveryNo": "DLV-2026-0002",
+    "hotel": "id_havakeic9mpk42iwd",
+    "staff": "u1",
+    "deliveredQty": 5,
+    "returnedEmptiesQty": 0,
+    "totalAmount": 5500,
+    "paymentReceived": 0,
+    "paymentMethod": "none",
+    "notes": "",
+    "createdAt": "2026-05-24T18:39:38.713Z"
+  },
+  {
+    "_id": "id_omhudera9mpk65xok",
+    "deliveryNo": "DLV-2026-0003",
+    "hotel": "id_cvscaramkmpk422np",
+    "staff": "u1",
+    "deliveredQty": 0,
+    "returnedEmptiesQty": 8,
+    "totalAmount": 0,
+    "paymentReceived": 0,
+    "paymentMethod": "none",
+    "notes": "8 recived\n",
+    "createdAt": "2026-05-24T19:27:26.660Z"
+  }
+]

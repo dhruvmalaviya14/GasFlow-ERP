@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "_id": "id_8ok7nmmwimpk4gp1w",
+    "paymentNo": "PMT-1779647989460-668",
+    "hotel": "id_cvscaramkmpk422np",
+    "amount": 2000,
+    "paymentMethod": "cash",
+    "receivedBy": "u1",
+    "notes": "",
+    "createdAt": "2026-05-24T18:39:49.460Z"
+  },
+  {
+    "_id": "id_j9ewfkmy2mpk5rmy4",
+    "paymentNo": "PMT-1779650179564-724",
+    "hotel": "id_havakeic9mpk42iwd",
+    "amount": 5500,
+    "paymentMethod": "cash",
+    "receivedBy": "u1",
+    "notes": "received\n",
+    "createdAt": "2026-05-24T19:16:19.564Z"
+  },
+  {
+    "_id": "id_79okks50nmpk5ru0z",
+    "paymentNo": "PMT-1779650188739-221",
+    "hotel": "id_cvscaramkmpk422np",
+    "amount": 5000,
+    "paymentMethod": "cash",
+    "receivedBy": "u1",
+    "notes": "half\n",
+    "createdAt": "2026-05-24T19:16:28.739Z"
+  }
+]

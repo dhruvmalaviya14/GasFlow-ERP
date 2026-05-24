@@ -2,10 +2,10 @@
   "name": "gas-distribution-backend",
   "version": "1.0.0",
   "description": "Enterprise-grade backend for Gas Cylinder Distribution Management System",
-  "main": "app.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

@@ -1,7 +1,6 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
-import { AuthContext } from '../context/AuthContext';
+import axios from '../api/axiosInstance';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Truck,
@@ -31,7 +30,7 @@ export default function Exchange() {
   const { data: hotels } = useQuery({
     queryKey: ['hotels'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/hotels');
+      const res = await axios.get('/hotels');
       return res.data;
     }
   });
@@ -40,7 +39,7 @@ export default function Exchange() {
   const { data: inventory, isLoading: invLoading } = useQuery({
     queryKey: ['inventory'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/inventory');
+      const res = await axios.get('/inventory');
       return res.data;
     }
   });
@@ -48,7 +47,7 @@ export default function Exchange() {
   // 3. Mutation to Submit Delivery Invoice
   const deliveryMutation = useMutation({
     mutationFn: async (payload) => {
-      const res = await axios.post('http://127.0.0.1:5000/api/deliveries', payload);
+      const res = await axios.post('/deliveries', payload);
       return res.data;
     },
     onSuccess: (data) => {

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { AuthProvider, AuthContext } from './context/AuthContext';
-import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider, AuthContext } from './store/AuthContext';
+import { ThemeProvider } from './store/ThemeContext';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import HotelStatus from './pages/HotelStatus';

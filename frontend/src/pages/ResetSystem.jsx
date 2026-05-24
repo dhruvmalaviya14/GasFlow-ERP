@@ -1,14 +1,12 @@
 import { useState, useContext } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
-import { AuthContext } from '../context/AuthContext';
+import axios from '../api/axiosInstance';
+import { AuthContext } from '../store/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import {
   ShieldAlert,
   AlertTriangle,
-  CheckCircle,
-  Inbox,
-  RefreshCw
+  CheckCircle
 } from 'lucide-react';
 
 export default function ResetSystem() {
@@ -23,7 +21,7 @@ export default function ResetSystem() {
   // 1. Reset Mutation
   const resetMutation = useMutation({
     mutationFn: async () => {
-      const res = await axios.post('http://127.0.0.1:5000/api/reset/reset-system');
+      const res = await axios.post('/reset/reset-system');
       return res.data;
     },
     onSuccess: () => {

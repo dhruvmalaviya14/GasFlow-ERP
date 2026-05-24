@@ -1,30 +1,30 @@
 [
   {
-    "_id": "id_xkg4vholempjojl6x",
+    "_id": "id_cvscaramkmpk422np",
     "name": "sahjanand",
-    "address": "jasdan..",
-    "contact": "6355625740",
+    "address": "jhjh",
+    "contact": "1234567890",
     "rate": 1200,
     "creditLimit": 50000,
     "filledCylinders": 0,
-    "emptyCylinders": 0,
-    "pendingBalance": 0,
-    "totalPaid": 0,
-    "createdAt": "2026-05-24T11:14:10.569Z",
-    "updatedAt": "2026-05-24T11:41:05.445Z"
+    "emptyCylinders": 2,
+    "pendingBalance": 5000,
+    "totalPaid": 7000,
+    "createdAt": "2026-05-24T18:28:27.253Z",
+    "updatedAt": "2026-05-24T18:28:27.253Z"
   },
   {
-    "_id": "id_i5gbsn8inmpjpe179",
+    "_id": "id_havakeic9mpk42iwd",
     "name": "dhruv",
     "address": "jasdan",
     "contact": "1234567890",
-    "rate": 1500,
+    "rate": 1100,
     "creditLimit": 50000,
-    "filledCylinders": 0,
+    "filledCylinders": 5,
     "emptyCylinders": 0,
     "pendingBalance": 0,
-    "totalPaid": 0,
-    "createdAt": "2026-05-24T11:37:50.997Z",
-    "updatedAt": "2026-05-24T11:41:05.445Z"
+    "totalPaid": 5500,
+    "createdAt": "2026-05-24T18:28:48.301Z",
+    "updatedAt": "2026-05-24T18:28:48.301Z"
   }
 ]

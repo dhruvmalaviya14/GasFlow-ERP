@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import { ThemeContext } from '../context/ThemeContext';
+import { AuthContext } from '../store/AuthContext';
+import { ThemeContext } from '../store/ThemeContext';
 import {
   LayoutDashboard,
   Building2,

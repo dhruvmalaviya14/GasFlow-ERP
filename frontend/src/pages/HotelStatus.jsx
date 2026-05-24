@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../api/axiosInstance';
 import { ClipboardList, Inbox, RefreshCw, Cylinder } from 'lucide-react';
 
 export default function HotelStatus() {
@@ -8,7 +8,7 @@ export default function HotelStatus() {
   const { data: hotels, isLoading, refetch, isRefetching } = useQuery({
     queryKey: ['hotels'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/hotels');
+      const res = await axios.get('/hotels');
       return res.data;
     }
   });
@@ -51,15 +51,29 @@ export default function HotelStatus() {
               <thead>
                 <tr className="border-b border-slate-200/60 dark:border-slate-800/50 text-slate-400 text-xs uppercase font-semibold">
                   <th className="pb-3">Hotel / Restaurant</th>
-                  <th className="pb-3 text-center">Filled Cylinders Outstanding</th>
-                  <th className="pb-3 text-center">Empty Cylinders Outstanding</th>
-                  <th className="pb-3 text-center">Total Outstanding Cylinders</th>
-                  <th className="pb-3 text-right">Standard Cylinder Rate</th>
+                  <th className="pb-3 text-center">Cylinders Held (Balance)</th>
+                  <th className="pb-3 text-right">Cylinder Rent (Rate)</th>
+                  <th className="pb-3 text-right">Outstanding Dues</th>
+                  <th className="pb-3 text-right">Credit Limit</th>
+                  <th className="pb-3 text-center">Account Status</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-900">
                 {hotels.map((hotel) => {
                   const totalCylinders = hotel.filledCylinders + hotel.emptyCylinders;
+                  
+                  // Compute account health status dynamically
+                  let statusText = 'Good Standing';
+                  let statusClass = 'bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 dark:text-emerald-400';
+                  
+                  if (hotel.pendingBalance > hotel.creditLimit) {
+                    statusText = 'Credit Exceeded';
+                    statusClass = 'bg-rose-50 dark:bg-rose-950/20 text-rose-600 dark:text-rose-400';
+                  } else if (hotel.pendingBalance > hotel.creditLimit * 0.8) {
+                    statusText = 'Near Limit';
+                    statusClass = 'bg-amber-50 dark:bg-amber-950/20 text-amber-600 dark:text-amber-400';
+                  }
+
                   return (
                     <tr key={hotel._id} className="hover:bg-slate-50/50 dark:hover:bg-slate-900/20 transition-all">
                       <td className="py-4 font-bold text-slate-850 dark:text-slate-100">
@@ -67,22 +81,24 @@ export default function HotelStatus() {
                         <span className="block text-[10px] text-slate-400 font-normal mt-0.5">{hotel.address}</span>
                       </td>
                       <td className="py-4 text-center">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 dark:text-emerald-400">
-                          <Cylinder className="h-3 w-3 fill-emerald-600 dark:fill-emerald-400" />
-                          {hotel.filledCylinders} units
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-50 dark:bg-teal-950/20 text-teal-600 dark:text-teal-400">
+                          <Cylinder className="h-3 w-3 fill-teal-600 dark:fill-teal-400" />
+                          {totalCylinders} units
                         </span>
-                      </td>
-                      <td className="py-4 text-center">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 dark:bg-amber-950/20 text-amber-600 dark:text-amber-400">
-                          <Cylinder className="h-3 w-3" />
-                          {hotel.emptyCylinders} units
-                        </span>
-                      </td>
-                      <td className="py-4 text-center font-bold text-slate-700 dark:text-slate-300">
-                        {totalCylinders} units
                       </td>
                       <td className="py-4 text-right font-semibold text-slate-800 dark:text-white">
                         Rs. {hotel.rate}
+                      </td>
+                      <td className={`py-4 text-right font-bold ${hotel.pendingBalance > 0 ? 'text-rose-600 dark:text-rose-450' : 'text-slate-500'}`}>
+                        Rs. {hotel.pendingBalance.toLocaleString()}
+                      </td>
+                      <td className="py-4 text-right text-slate-500">
+                        Rs. {hotel.creditLimit.toLocaleString()}
+                      </td>
+                      <td className="py-4 text-center">
+                        <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${statusClass}`}>
+                          {statusText}
+                        </span>
                       </td>
                     </tr>
                   );

@@ -1,5 +1,5 @@
 {
-  "filledStock": 95,
-  "emptyStock": 5,
+  "filledStock": 85,
+  "emptyStock": 8,
   "lowStockThreshold": 15
 }

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../api/axiosInstance';
 import {
   BarChart3,
   Cylinder,
@@ -17,7 +17,7 @@ export default function MonthlyReport() {
   const { data: deliveries, isLoading, refetch, isRefetching } = useQuery({
     queryKey: ['deliveries'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/deliveries');
+      const res = await axios.get('/deliveries');
       return res.data;
     }
   });

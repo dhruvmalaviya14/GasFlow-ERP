@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../api/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import {
   Building2,
@@ -27,7 +27,7 @@ export default function AddHotel() {
 
   const addHotelMutation = useMutation({
     mutationFn: async (payload) => {
-      const res = await axios.post('http://127.0.0.1:5000/api/hotels', payload);
+      const res = await axios.post('/hotels', payload);
       return res.data;
     },
     onSuccess: () => {

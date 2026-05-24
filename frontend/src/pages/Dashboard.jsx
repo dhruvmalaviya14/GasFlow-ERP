@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import { AuthContext } from '../context/AuthContext';
+import axios from '../api/axiosInstance';
+import { AuthContext } from '../store/AuthContext';
 import { motion } from 'framer-motion';
 import {
   Warehouse,
@@ -13,7 +13,6 @@ import {
   PlusCircle,
   Truck,
   ArrowRight,
-  TrendingUp,
   Inbox
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -25,7 +24,7 @@ export default function Dashboard() {
   const { data: inventory, isLoading: invLoading } = useQuery({
     queryKey: ['inventory'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/inventory');
+      const res = await axios.get('/inventory');
       return res.data;
     }
   });
@@ -34,7 +33,7 @@ export default function Dashboard() {
   const { data: hotelsList, isLoading: hotelsLoading } = useQuery({
     queryKey: ['paymentStatus'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/payments/status');
+      const res = await axios.get('/payments/status');
       return res.data;
     }
   });
@@ -43,7 +42,7 @@ export default function Dashboard() {
   const { data: deliveries, isLoading: dlvLoading } = useQuery({
     queryKey: ['deliveries'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/deliveries');
+      const res = await axios.get('/deliveries');
       return res.data;
     }
   });
@@ -52,7 +51,7 @@ export default function Dashboard() {
   const { data: logs, isLoading: logsLoading } = useQuery({
     queryKey: ['logs'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/logs');
+      const res = await axios.get('/logs');
       return res.data;
     }
   });

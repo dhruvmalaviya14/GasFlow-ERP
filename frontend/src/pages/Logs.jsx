@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../api/axiosInstance';
 import { History, Inbox, RefreshCw, Activity } from 'lucide-react';
 
 export default function Logs() {
@@ -8,7 +8,7 @@ export default function Logs() {
   const { data: logs, isLoading, refetch, isRefetching } = useQuery({
     queryKey: ['logs'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/logs');
+      const res = await axios.get('/logs');
       return res.data;
     }
   });

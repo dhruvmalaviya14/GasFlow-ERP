@@ -1,14 +1,62 @@
 [
   {
-    "_id": "id_yxv9py610mpjpi78n",
+    "_id": "id_qm03qqwdjmpjyjlvx",
     "user": "bharat",
-    "action": "Executed administrative full system transactional reset.",
-    "createdAt": "2026-05-24T11:41:05.447Z"
+    "action": "Logged into the system",
+    "createdAt": "2026-05-24T15:54:07.629Z"
   },
   {
-    "_id": "id_mg4ghaeuympjsdajz",
-    "user": "lalo",
-    "action": "Logged into the system",
-    "createdAt": "2026-05-24T13:01:15.311Z"
+    "_id": "id_g2lpvqdfempk422nu",
+    "user": "bharat",
+    "action": "Created hotel sahjanand",
+    "createdAt": "2026-05-24T18:28:27.258Z"
+  },
+  {
+    "_id": "id_nb9kalt07mpk42iwh",
+    "user": "bharat",
+    "action": "Created hotel dhruv",
+    "createdAt": "2026-05-24T18:28:48.305Z"
+  },
+  {
+    "_id": "id_ct163f3vgmpk44lmz",
+    "user": "bharat",
+    "action": "Manually updated inventory → Filled: 100, Empty: 0",
+    "createdAt": "2026-05-24T18:30:25.163Z"
+  },
+  {
+    "_id": "id_4lg97qetgmpk452cc",
+    "user": "bharat",
+    "action": "Recorded delivery DLV-2026-0001 for sahjanand: Delivered 10, Returned 0, Paid: 0",
+    "createdAt": "2026-05-24T18:30:46.812Z"
+  },
+  {
+    "_id": "id_jzfj0ym78mpk4ggrd",
+    "user": "bharat",
+    "action": "Recorded delivery DLV-2026-0002 for dhruv: Delivered 5, Returned 0, Paid: 0",
+    "createdAt": "2026-05-24T18:39:38.713Z"
+  },
+  {
+    "_id": "id_vgivcgtwompk4gp1w",
+    "user": "bharat",
+    "action": "Recorded payment PMT-1779647989460-668 of Rs. 2000 from sahjanand",
+    "createdAt": "2026-05-24T18:39:49.460Z"
+  },
+  {
+    "_id": "id_m1x5fam1fmpk5rmy4",
+    "user": "bharat",
+    "action": "Recorded payment PMT-1779650179564-724 of Rs. 5500 from dhruv",
+    "createdAt": "2026-05-24T19:16:19.564Z"
+  },
+  {
+    "_id": "id_y8q54gxsampk5ru0z",
+    "user": "bharat",
+    "action": "Recorded payment PMT-1779650188739-221 of Rs. 5000 from sahjanand",
+    "createdAt": "2026-05-24T19:16:28.739Z"
+  },
+  {
+    "_id": "id_t2285eitbmpk65xok",
+    "user": "bharat",
+    "action": "Recorded delivery DLV-2026-0003 for sahjanand: Delivered 0, Returned 8, Paid: 0",
+    "createdAt": "2026-05-24T19:27:26.660Z"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "_id": "u1",
     "username": "bharat",
-    "password": "$2a$10$CccCQNxxBWTJuHBdRRyqxuVtbW6OGUf7NtY1y4Z6zQ3I92krzchOK",
+    "password": "$2a$10$XJ7anfiiUTHDHzJHSliTtuVXoFnP8S/c1ZTAuy51Kln7qlkapdmUC",
     "name": "Bharat (Admin)",
     "role": "admin",
     "status": "active"
@@ -10,7 +10,7 @@
   {
     "_id": "u2",
     "username": "lalo",
-    "password": "$2a$10$CccCQNxxBWTJuHBdRRyqxuuGdIXBUlAbco73WeUe0/IPhdaiVoxtK",
+    "password": "$2a$10$XJ7anfiiUTHDHzJHSliTtudFnptwb1Wt2YhtSyWAfxOw69WvPoyhq",
     "name": "Lalo (Staff)",
     "role": "staff",
     "status": "active"

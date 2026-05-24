@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '../api/axiosInstance';
 import { Warehouse, Inbox, RefreshCw, Cylinder, ShieldCheck, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ export default function Inventory() {
   const { data: inventory, isLoading, refetch, isRefetching } = useQuery({
     queryKey: ['inventory'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/inventory');
+      const res = await axios.get('/inventory');
       return res.data;
     }
   });

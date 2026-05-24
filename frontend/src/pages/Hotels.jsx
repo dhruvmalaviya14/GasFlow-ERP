@@ -1,13 +1,12 @@
 import { useState, useContext } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
-import { AuthContext } from '../context/AuthContext';
+import axios from '../api/axiosInstance';
+import { AuthContext } from '../store/AuthContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Building2,
   Phone,
   MapPin,
-  DollarSign,
   Search,
   PlusCircle,
   X,
@@ -40,7 +39,7 @@ export default function Hotels() {
   const { data: hotels, isLoading } = useQuery({
     queryKey: ['hotels'],
     queryFn: async () => {
-      const res = await axios.get('http://127.0.0.1:5000/api/hotels');
+      const res = await axios.get('/hotels');
       return res.data;
     }
   });
@@ -48,7 +47,7 @@ export default function Hotels() {
   // 2. Edit Mutation
   const editMutation = useMutation({
     mutationFn: async (payload) => {
-      const res = await axios.put(`http://127.0.0.1:5000/api/hotels/${payload.id}`, payload.data);
+      const res = await axios.put(`/hotels/${payload.id}`, payload.data);
       return res.data;
     },
     onSuccess: () => {
@@ -68,7 +67,7 @@ export default function Hotels() {
   // 3. Delete Mutation
   const deleteMutation = useMutation({
     mutationFn: async (id) => {
-      const res = await axios.delete(`http://127.0.0.1:5000/api/hotels/${id}`);
+      const res = await axios.delete(`/hotels/${id}`);
       return res.data;
     },
     onSuccess: () => {
