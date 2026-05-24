@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from '../api/axiosInstance';
-import { ClipboardList, Inbox, RefreshCw, Cylinder } from 'lucide-react';
+import { Inbox, RefreshCw, Cylinder } from 'lucide-react';
 
 export default function HotelStatus() {
   

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from '../api/axiosInstance';
-import { History, Inbox, RefreshCw, Activity } from 'lucide-react';
+import { Inbox, RefreshCw, Activity } from 'lucide-react';
 
 export default function Logs() {
   

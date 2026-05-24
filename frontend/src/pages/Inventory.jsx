@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from '../api/axiosInstance';
-import { Warehouse, Inbox, RefreshCw, Cylinder, ShieldCheck, AlertCircle } from 'lucide-react';
+import { Inbox, RefreshCw, Cylinder, ShieldCheck, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Inventory() {

@@ -2,21 +2,16 @@ import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from '../api/axiosInstance';
 import {
-  TrendingUp,
   FileDown,
-  Building,
   History,
-  Coins,
-  DollarSign,
-  Inbox,
-  AlertCircle
+  Inbox
 } from 'lucide-react';
 
 export default function Ledger() {
   const [selectedHotelId, setSelectedHotelId] = useState('');
 
   // 1. Fetch Hotels dropdown list
-  const { data: hotels, isLoading: hotelsLoading } = useQuery({
+  const { data: hotels } = useQuery({
     queryKey: ['hotels'],
     queryFn: async () => {
       const res = await axios.get('/hotels');

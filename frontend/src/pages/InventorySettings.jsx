@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from '../api/axiosInstance';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   Settings,
-  Warehouse,
   Truck,
   AlertCircle,
-  CheckCircle,
-  Cylinder,
-  ClipboardList
+  CheckCircle
 } from 'lucide-react';
 
 export default function InventorySettings() {
@@ -30,7 +27,7 @@ export default function InventorySettings() {
   const [truckSuccess, setTruckSuccess] = useState('');
 
   // 1. Fetch live Inventory parameters
-  const { data: inventory, isLoading } = useQuery({
+  useQuery({
     queryKey: ['inventory'],
     queryFn: async () => {
       const res = await axios.get('/inventory');

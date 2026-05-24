@@ -2,11 +2,8 @@ import { useQuery } from '@tanstack/react-query';
 import axios from '../api/axiosInstance';
 import {
   BarChart3,
-  Cylinder,
-  Coins,
   TrendingUp,
   Inbox,
-  ArrowUpRight,
   ShieldCheck,
   RefreshCw
 } from 'lucide-react';
